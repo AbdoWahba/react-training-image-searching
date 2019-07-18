@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
           className="ui form"
           onSubmit={event => {
             event.preventDefault();
-            console.log(this.state.term);
+            this.props.onSearchBarSubmit(this.state.term);
           }}
         >
           <div className="field">

@@ -4,7 +4,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <SearchBar />
+        <SearchBar
+          onSearchBarSubmit={term => {
+            console.log(term);
+          }}
+        />
       </div>
     );
   }
