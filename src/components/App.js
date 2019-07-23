@@ -1,9 +1,9 @@
 import React from "react";
 import Axios from "axios";
 import SearchBar from "./SearchBar";
-
+import ImageList from "./ImageList";
 class App extends React.Component {
-  state = { image: [] };
+  state = { images: [] };
   render() {
     return (
       <div className="ui container">
@@ -23,6 +23,7 @@ class App extends React.Component {
             console.log(response.data.results);
           }}
         />
+        <ImageList images={this.state.images} />
       </div>
     );
   }
