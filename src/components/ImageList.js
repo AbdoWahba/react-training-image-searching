@@ -7,7 +7,7 @@ class ImageList extends React.Component {
       return <img src={urls.regular} key={id} alt={description} />;
     });
     console.log(this.props.images);
-    return <div>{images}</div>;
+    return <div className="image-list">{images}</div>;
   }
 }
 
