@@ -7,8 +7,9 @@ class Image extends React.Component {
     this.state = { hieght: 150 };
   }
   componentDidMount() {
-    console.log(this.imageRef.current.clientHeight);
-    this.setState({ hieght: this.imageRef.current.clientHeight });
+    this.imageRef.current.addEventListener("load", () => {
+      this.setState({ hieght: this.imageRef.current.clientHeight });
+    });
   }
   render = () => {
     return (
